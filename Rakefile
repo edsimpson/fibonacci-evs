@@ -14,11 +14,11 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "fibonacci-gem"
-  gem.homepage = "http://github.com/edsimpson/fibonacci-gem"
+  gem.name = "fibonacci-evs"
+  gem.homepage = "http://github.com/edsimpson/fibonacci-evs"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Test gem with a Fibonacci-related method for Fixnum and Bignum.}
+  gem.description = %Q{This is just a test. Fibonacci-related methods for Fixnum and Bignum. Currently only has closest_fibonacci.}
   gem.email = "edvsimpson@gmail.com"
   gem.authors = ["Edward Simpson"]
   # dependencies defined in Gemfile
@@ -42,12 +42,12 @@ end
 
 task :default => :test
 
-require 'rake/rdoctask'
-Rake::RDocTask.new do |rdoc|
+require 'rdoc/task'
+RDoc::Task.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "fibonacci-gem #{version}"
+  rdoc.title = "fibonacci-evs #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
